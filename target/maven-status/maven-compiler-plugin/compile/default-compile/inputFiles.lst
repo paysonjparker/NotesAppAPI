@@ -1,1 +1,10 @@
 /Users/paysonparker/Desktop/NotesAppAPI/src/main/java/com/gcu/NotesAppApiApplication.java
+/Users/paysonparker/Desktop/NotesAppAPI/src/main/java/com/gcu/model/NoteModel.java
+/Users/paysonparker/Desktop/NotesAppAPI/src/main/java/com/gcu/data/DataAccessInterface.java
+/Users/paysonparker/Desktop/NotesAppAPI/src/main/java/com/gcu/data/UserDataService.java
+/Users/paysonparker/Desktop/NotesAppAPI/src/main/java/com/gcu/business/UserBusinessService.java
+/Users/paysonparker/Desktop/NotesAppAPI/src/main/java/com/gcu/data/NoteDataService.java
+/Users/paysonparker/Desktop/NotesAppAPI/src/main/java/com/gcu/model/UserModel.java
+/Users/paysonparker/Desktop/NotesAppAPI/src/main/java/com/gcu/business/NoteRestService.java
+/Users/paysonparker/Desktop/NotesAppAPI/src/main/java/com/gcu/business/NoteBusinessService.java
+/Users/paysonparker/Desktop/NotesAppAPI/src/main/java/com/gcu/business/UserRestService.java
