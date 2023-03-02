@@ -36,7 +36,7 @@ public class UserDataService implements DataAccessInterface<UserModel> {
      */
     @Override
     public List<UserModel> findAll() {
-        String sql = "SELECT * FROM notes_app.users"; //SQL statement to retrieve all user data
+        String sql = "SELECT * FROM voqem4eztc79k5tm.users"; //SQL statement to retrieve all user data
         List<UserModel> users = new ArrayList<UserModel>();
         try
         {
@@ -64,7 +64,7 @@ public class UserDataService implements DataAccessInterface<UserModel> {
      */
     @Override
     public UserModel findById(int id) {
-        String sql = "SELECT * FROM notes_app.users WHERE id LIKE " + id;
+        String sql = "SELECT * FROM voqem4eztc79k5tm.users WHERE id LIKE " + id;
         UserModel user = null;
         try
         {
@@ -92,7 +92,7 @@ public class UserDataService implements DataAccessInterface<UserModel> {
      */
     @Override
     public boolean create(UserModel userModel) {
-        String sql = "INSERT INTO notes_app.users (full_name, email, password) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO voqem4eztc79k5tm.users (full_name, email, password) VALUES (?, ?, ?)";
         try
         {
             int rows = jdbcTemplateObject.update(sql,
@@ -118,7 +118,7 @@ public class UserDataService implements DataAccessInterface<UserModel> {
      */
     @Override
     public boolean update(UserModel userModel) {
-        String sql = String.format("UPDATE notes_app.users SET full_name='%s', email='%s', password='%s' WHERE id=%d;",
+        String sql = String.format("UPDATE voqem4eztc79k5tm.users SET full_name='%s', email='%s', password='%s' WHERE id=%d;",
                 userModel.getFull_name(),
                 userModel.getEmail(),
                 userModel.getPassword(),
@@ -145,7 +145,7 @@ public class UserDataService implements DataAccessInterface<UserModel> {
      */
     @Override
     public boolean delete(UserModel userModel) {
-        String sql = "DELETE FROM notes_app.users WHERE id=" + userModel.getId();
+        String sql = "DELETE FROM voqem4eztc79k5tm.users WHERE id=" + userModel.getId();
         try
         {
             jdbcTemplateObject.execute(sql);

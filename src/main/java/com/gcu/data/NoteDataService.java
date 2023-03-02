@@ -37,7 +37,7 @@ public class NoteDataService implements DataAccessInterface<NoteModel>{
      */
     @Override
     public List<NoteModel> findAll() {
-        String sql = "SELECT * FROM notes_app.notes"; //SQL statement to retrieve all note data
+        String sql = "SELECT * FROM voqem4eztc79k5tm.notes"; //SQL statement to retrieve all note data
         List<NoteModel> notes = new ArrayList<NoteModel>();
         try
         {
@@ -65,7 +65,7 @@ public class NoteDataService implements DataAccessInterface<NoteModel>{
      */
     @Override
     public NoteModel findById(int id) {
-        String sql = "SELECT * FROM notes_app.notes WHERE id LIKE " + id;
+        String sql = "SELECT * FROM voqem4eztc79k5tm.notes WHERE id LIKE " + id;
         NoteModel note = null;
         try
         {
@@ -93,7 +93,7 @@ public class NoteDataService implements DataAccessInterface<NoteModel>{
      */
     @Override
     public List<NoteModel> findByUserId(int userId) {
-        String sql = "SELECT * FROM notes_app.notes WHERE user_id LIKE " + userId;
+        String sql = "SELECT * FROM voqem4eztc79k5tm.notes WHERE user_id LIKE " + userId;
         List<NoteModel> notes = new ArrayList<NoteModel>();
         try
         {
@@ -121,7 +121,7 @@ public class NoteDataService implements DataAccessInterface<NoteModel>{
      */
     @Override
     public boolean create(NoteModel noteModel) {
-        String sql = "INSERT INTO notes_app.notes (title, text, user_id) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO voqem4eztc79k5tm.notes (title, text, user_id) VALUES (?, ?, ?)";
         try
         {
             int rows = jdbcTemplateObject.update(sql,
@@ -147,7 +147,7 @@ public class NoteDataService implements DataAccessInterface<NoteModel>{
      */
     @Override
     public boolean update(NoteModel noteModel) {
-        String sql = String.format("UPDATE notes_app.notes SET title='%s', text='%s', user_id='%s' WHERE id=%d;",
+        String sql = String.format("UPDATE voqem4eztc79k5tm.notes SET title='%s', text='%s', user_id='%s' WHERE id=%d;",
                 noteModel.getTitle(),
                 noteModel.getText(),
                 noteModel.getUser_id(),
@@ -174,7 +174,7 @@ public class NoteDataService implements DataAccessInterface<NoteModel>{
      */
     @Override
     public boolean delete(NoteModel noteModel) {
-        String sql = "DELETE FROM notes_app.notes WHERE id=" + noteModel.getId();
+        String sql = "DELETE FROM voqem4eztc79k5tm.notes WHERE id=" + noteModel.getId();
         try
         {
             jdbcTemplateObject.execute(sql);
@@ -195,7 +195,7 @@ public class NoteDataService implements DataAccessInterface<NoteModel>{
      */
     @Override
     public List<NoteModel> findByText(String searchText) {
-        String sql = "SELECT * FROM notes_app.notes WHERE text LIKE " + searchText; //SQL statement to retrieve all user data
+        String sql = "SELECT * FROM voqem4eztc79k5tm.notes WHERE text LIKE " + searchText; //SQL statement to retrieve all user data
         List<NoteModel> notes = new ArrayList<NoteModel>();
         try
         {
