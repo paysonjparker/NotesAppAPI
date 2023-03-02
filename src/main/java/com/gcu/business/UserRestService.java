@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://notes-app-react.herokuapp.com")
 @RestController
 @RequestMapping("/user-service")
 public class UserRestService {

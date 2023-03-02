@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://notes-app-react.herokuapp.com")
 @RestController
 @RequestMapping("/note-service")
 public class NoteRestService {
