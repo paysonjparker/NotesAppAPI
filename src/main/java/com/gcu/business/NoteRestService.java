@@ -176,7 +176,7 @@ public class NoteRestService {
         noteBusinessService.delete(note);
         Map<String, Boolean> response = new HashMap<>();
         response.put("deleted", Boolean.TRUE);
-        
+
         logger.info("==========> EXIT NoteRestService.deleteNote() at " + "/notes/{}", noteIdNumber);
 
         return response;
