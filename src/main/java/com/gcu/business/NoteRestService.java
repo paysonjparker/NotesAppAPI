@@ -24,6 +24,17 @@ public class NoteRestService {
     NoteBusinessService noteBusinessService;
 
     /**
+     * Used for monitoring application uptime.
+     * @return Status OK.
+     */
+    @GetMapping(path="/", produces= {MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<?> monitor()
+    {
+        logger.info("==========> ENTER NoteRestService.monitor() at " + "/");
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    /**
      * Gets all notes in JSON format.
      * @return JSON notes.
      */
